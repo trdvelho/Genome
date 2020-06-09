@@ -1,32 +1,16 @@
 import * as React from 'react';
-import { Text, View,Animated,
-  Dimensions,
-  ScrollView,
-  Image,
-  ImageBackground,
-  StyleSheet,
-  TouchableOpacity } from 'react-native';
+import { 
+  Text, 
+  View,
+  Image
+  } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import Wearables from './pages/Wearables';
+import Profile from './pages/Profile';
+import Help from './pages/Help';
 
-function ProfileScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
-    </View>
-  );
-}
-
-function HelpScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Profile!</Text>
-    </View>
-  );
-}
 bottomNavigatorConfigs = {
   initialRouteName: "HomeScreen",
   tabBarOptions: {
@@ -51,7 +35,7 @@ function MyTabs() {
       </Tab.Screen>
       <Tab.Screen
         name="Profile"
-        component={ProfileScreen} 
+        component={Profile} 
         options={{
           tabBarLabel: 'Profile',
           tabBarIcon: ({ color }) => (
@@ -61,7 +45,7 @@ function MyTabs() {
         />
       <Tab.Screen 
         name="Help"
-        component={HelpScreen} 
+        component={Help} 
         options={{
           tabBarLabel: 'Help',
           tabBarIcon: ({ color }) => (

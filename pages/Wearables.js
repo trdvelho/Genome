@@ -2,7 +2,6 @@ import React, { Component, useState } from "react";
 import {
   Animated,
   Dimensions,
-  ScrollView,
   Image,
   ImageBackground,
   StyleSheet,
@@ -17,17 +16,13 @@ const SCREEN_WIDTH = Dimensions.get("window").width;
 const xOffset = new Animated.Value(0);
 
 const Screen = props => {
-    //alert(props.img)
-  //const image = require(props.img);
   return (
     <View style={styles.scrollPage}>
       <Animated.View style={[styles.screen, transitionAnimation(props.index)]}>
         
         { props.img ?
-            (
-                <Image source={props.img} style={styles.cardImg}></Image>
-            )
-            : ( 
+            ( <Image source={props.img} style={styles.cardImg}></Image> ) :
+            ( 
                 <TouchableOpacity
                     style={styles.buttonAdd}>
                         <Text style={styles.buttonTextAdd}>+</Text>
@@ -53,7 +48,7 @@ const Screen = props => {
 const transitionAnimation = index => {
   return {
     transform: [
-      { perspective: 800 },
+      { perspective: 600 },
       {
         scale: xOffset.interpolate({
           inputRange: [
