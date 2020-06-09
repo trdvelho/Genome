@@ -6,7 +6,7 @@ React-Native app developed according to challenge documention
 ````
 $ cd Genome
 $ npm i
-$react-native run-android
+$ react-native run-android
 ````
 
 **Note**
