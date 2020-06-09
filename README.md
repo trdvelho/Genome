@@ -3,7 +3,7 @@ React-Native app developed according to challenge documention
 
 ## Follow Instalation Instructions
 - Run in your terminal:
-````
+```
 $ cd Genome
 $ npm i
 $react-native run-android
