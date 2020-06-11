@@ -1,0 +1,1 @@
+export default backgroundImage = require('./img/Background.png');

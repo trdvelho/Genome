@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, ImageBackground, Image, StyleSheet } from 'react-native';
+import backgroundImage from '../resources/background';
 
 export default function Profile() {
-    const image = require('../resources/img/Background.png');
     return (
-        <ImageBackground source={image} style={{flex: 1}}>
+        <ImageBackground source={backgroundImage} style={{flex: 1}}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                 <Image source={require(`../resources/img/profilePhoto.png`)} style={styles.profilePhoto}></Image>
                 <Text style={styles.userName}>Lottie Curtis</Text>

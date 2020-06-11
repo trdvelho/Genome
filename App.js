@@ -1,9 +1,5 @@
 import * as React from 'react';
-import { 
-  Text, 
-  View,
-  Image
-  } from 'react-native';
+import { Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 

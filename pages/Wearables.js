@@ -9,6 +9,7 @@ import {
   View,
   TouchableOpacity
 } from "react-native";
+import backgroundImage from '../resources/background';
 
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
@@ -56,34 +57,12 @@ const transitionAnimation = index => {
             index * SCREEN_WIDTH,
             (index + 1) * SCREEN_WIDTH
           ],
-          outputRange: [0.5, 1, 0.5]
-        })
-      },
-      {
-        rotateX: xOffset.interpolate({
-          inputRange: [
-            (index - 1) * SCREEN_WIDTH,
-            index * SCREEN_WIDTH,
-            (index + 1) * SCREEN_WIDTH
-          ],
-          outputRange: ["0deg", "0deg", "0deg"]
-        })
-      },
-      {
-        rotateY: xOffset.interpolate({
-          inputRange: [
-            (index - 1) * SCREEN_WIDTH,
-            index * SCREEN_WIDTH,
-            (index + 1) * SCREEN_WIDTH
-          ],
-          outputRange: ["0deg", "0deg", "0deg"]
+          outputRange: [0.3, 1, 0.3]
         })
       }
     ]
   };
 };
-
-const image = require('../resources/img/Background.png');
 
 export default function Wearables() {
     const [ cards, setCard ] = useState([
@@ -99,7 +78,7 @@ export default function Wearables() {
         }
     ]);
     return (
-      <ImageBackground source={image} style={styles.imageBG}>
+      <ImageBackground source={backgroundImage} style={styles.imageBG}>
         <View style={styles.userInfos} >
           <Image source={require(`../resources/img/profilePhoto.png`)} style={styles.profilePhoto}></Image>
           <Text style={styles.userName}>Lottie Curtis</Text>
